@@ -16,13 +16,27 @@ const[menu,setMenu] = useState("Home");
 
        
         <div className='navbar'>
+
             <div className='nav'>
             <img src={cart_img} alt="" />
             </div>
             <div className='second-div'>
+
+            
+        
+
           <div className='nav-logo'>
             <h2>Bandage</h2>
           </div>
+
+          <label class="toggle-button" for="menubar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <input className='input_check' type='checkbox' id='menubar'></input>
+        <div className='Navbar'>
           <ul className='nav-menu'>
             <li onClick={()=>{setMenu("Home")}}><Link style={{textDecoration: 'none'}}  to='/'>Home</Link> {menu=== "Home"?<hr />:<></>}</li>
             <li onClick={()=>{setMenu("Products")}}><Link style={{textDecoration: 'none'}} to='/products'>Shop/Products</Link>{menu=== "Products"?<hr />:<></>}</li>
@@ -40,6 +54,7 @@ const[menu,setMenu] = useState("Home");
           </div>
           <div className='icon'><img src={cartCount} alt="" /></div>
 
+          </div>
           </div>
         </div>
         
